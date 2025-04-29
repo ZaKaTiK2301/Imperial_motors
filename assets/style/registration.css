@@ -1,0 +1,407 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: .6s;
+    font-family: 'Montserrat-Regular';
+}
+
+body{
+    background-image: url(../img/login/ban.png);
+    height: 1205px;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('../fonts/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('../fonts/Montserrat-SemiBold.ttf');
+}
+
+/* login start */
+.log_contain {
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin-top: 132px;
+}
+
+.bel {
+    margin: 0 auto;
+    width: 853px ;
+    height: 886px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+}
+
+.bel img {
+    margin-top: 40px;
+    margin-left: 741px;
+}
+
+.text_pad {
+    margin-top: 5px;
+    margin: 0 auto;
+}
+
+.text_pad h1{
+    color: #000;
+    font-size: 32px;
+    text-align: center;
+}
+
+.nado{
+    padding: 29px 146px 0px 146px;
+}
+
+.stroka_btn {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.vxod {
+    position: absolute;
+    width: 546px;
+    height: 47px;
+    background-color: #EEEEEE;
+    color: #000000;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding-right: 260px;
+}
+
+.registr {
+    position: absolute;
+    width: 297px;
+    height: 47px;
+    z-index: 999;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    margin-left: 250px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nado2{
+    padding: 60px 146px 0px 146px;
+    justify-content: space-between;
+}
+
+.login input {
+    width: 545px;
+    height: 63px;
+    border: 1px solid #a1a1a1;
+    margin-top: 25px;
+    border-radius: 7px;
+    color: #585858;
+    font-size: 16px;
+    padding: 21px 30px;
+}
+
+.login input::placeholder {
+    color: #585858;
+    font-size: 16px;
+}
+
+.parol p{
+    padding: 29px 0px 0px 510px;
+}
+
+.voiti_btn{
+    width: 545px;
+    height: 70px;
+    background-color: #dbdbdb;
+    border: none;
+    border-radius: 7px;
+    margin: 40px 0px 0px 146px;
+    font-size: 20px;
+    color: #3A3A3A;
+    cursor: pointer;
+    font-family: 'Montserrat-Medium';
+}
+
+.konf p {
+    margin: 29px 0px 0px 146px;
+    font-size: 12px;
+    font-family: 'Montserrat-Medium';
+    
+}
+/* login end */
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    body{
+        background-image: url(../img/login/ban.png);
+        height: 1205px;
+        background-size: cover;
+        width: 768px;
+    }
+
+    .log_contain {
+        margin: 0 auto;
+        justify-content: space-between;
+        max-width: 768px;
+        margin-top: 30px;
+    }
+    
+    .bel {
+        width: 90%;
+        height: auto;
+        padding-bottom: 0px;
+        width: 558px;
+        height: 690px;
+        border-radius: 35px;
+    }
+
+    .bel img {
+        margin-left: 480px;
+        margin-right: 0px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .text_pad h1 {
+        font-size: 22px;
+    }
+
+    .nado {
+        padding: 29px 89px 0px 40px;
+    }
+
+    .login input::placeholder {
+        color: #585858;
+        font-size: 13px;
+    }
+
+    .stroka_btn {
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+    
+    .vxod {
+        position: absolute;
+        width: 420px;
+        height: 35px;
+        background-color: #EEEEEE;
+        color: #3A3A3A;
+        border-radius: 7px;
+        border: none;
+        padding-left: 0px;
+        font-size: 14px;
+        cursor: pointer;
+        left: 30px;
+        padding-right: 200px;
+    }
+    
+    .registr {
+        position: absolute;
+        width: 200px;
+        height: 35px;
+        background-color: #000;
+        color: #ffffff;
+        border-radius: 7px;
+        border: none;
+        z-index: 999;
+        font-size: 14px;
+        cursor: pointer;
+        left: 0px;
+    }
+
+    .nado2 {
+        padding: 2px 70px 0px 70px;
+    }
+
+    .login input {
+        width: 100%;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .parol p{
+        padding: 20px 0px 0px 344px;
+        font-size: 13px;
+    }
+    
+    .voiti_btn{
+        width: 420px;
+        height: 49px;
+        background-color: #dbdbdb;
+        border: none;
+        border-radius: 7px;
+        margin: 29px 70px 0px 70px;
+        font-size: 15px;
+        color: #3A3A3A;
+        cursor: pointer;
+        font-family: 'Montserrat-Medium';
+    }
+    
+    .konf p {
+        margin: 29px 0px 0px 70px;
+        font-size: 10px;
+        font-family: 'Montserrat-Medium';
+
+    }
+
+}
+
+@media screen and (max-width: 390px) {
+    .log_contain {
+        margin: 0 auto;
+        justify-content: space-between;
+        max-width: 768px;
+        margin-top: 30px;
+    }
+
+    body{
+        background-image: url(../img/login/ban.png);
+        height: 1205px;
+        background-size: cover;
+        width: 390px;
+    }
+
+    .bel {
+        height: auto;
+        margin: 0;
+        margin-left: 10px;
+        padding-bottom: 0px;
+        width: 300px;
+        height: 470px;
+        border-radius: 30px;
+    }
+
+    .bel img {
+        margin-left: 250px;
+        margin-right: 0px;
+        width: 15px;
+        height: 15px;
+        margin-top: 20px;
+    }
+
+    .text_pad h1 {
+        font-size: 15px;
+    }
+
+    .nado {
+        padding: 19px 89px 0px 2px;
+    }
+
+    .login input::placeholder {
+        color: #585858;
+        font-size: 13px;
+    }
+
+    .stroka_btn {
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+    
+    .vxod {
+        position: absolute;
+        width: 250px;
+        height: 30px;
+        background-color: #EEEEEE;
+        color: #3A3A3A;
+        border-radius: 7px;
+        border: none;
+        margin-left: 0px;
+        font-size: 11px;
+        cursor: pointer;
+        left: 12px;
+        padding-right: 100px;
+    }
+    
+    .registr {
+        position: absolute;
+        width: 140px;
+        height: 30px;
+        background-color: #000;
+        color: #ffffff;
+        border-radius: 7px;
+        border: none;
+        z-index: 999;
+        font-size: 11px;
+        cursor: pointer;
+        left: 0px;
+        margin: 0px 0px 0px 140px;
+    }
+
+    .nado2 {
+        padding: 2px 20px 0px 15px;
+        margin-top: 40px;
+    }
+
+    .login input {
+        height: 20px;
+        padding-left: 13px;
+        font-size: 11px;
+        margin-top: 10px;
+        padding: 15px 15px 15px 10px;
+        border: 1px solid #a1a1a1;
+        color: #b3b3b3;
+    }
+
+    .login input::placeholder {
+        color: #585858;
+        font-size: 11px;
+    }
+
+    .parol p{
+        padding: 20px 0px 0px 155px;
+        font-size: 11px;
+    }
+    
+    .voiti_btn{
+        width: 260px;
+        height: 35px;
+        background-color: #dbdbdb;
+        border: none;
+        border-radius: 7px;
+        margin: 29px 20px 0px 20px;
+        font-size: 12px;
+        color: #3A3A3A;
+        cursor: pointer;
+        font-family: 'Montserrat-Medium';
+    }
+    
+    .konf p {
+        margin: 29px 0px 0px 20px;
+        font-size: 7px;
+        font-family: 'Montserrat-Medium';
+    }
+}

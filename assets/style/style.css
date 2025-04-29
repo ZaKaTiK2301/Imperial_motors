@@ -1,0 +1,1625 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .5s;
+    scroll-behavior: smooth;
+    outline: none;
+    text-decoration: none;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1450px;
+}
+
+body{
+    background-color: #040506;
+}
+
+/* Подключение шрифтов */
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+/* назначение шрифтов */
+
+h1{
+    font-family: Roboto, sans-serif;
+}
+
+h2{
+    font-family: Roboto, sans-serif;
+}
+
+h3{
+    font-family: Roboto, sans-serif;
+}
+
+h4{
+    font-family: Roboto, sans-serif;
+}
+
+p{
+    font-family: Roboto, sans-serif;
+}
+
+a{
+    font-family: Roboto, sans-serif;
+}
+
+/* header start */
+
+header{
+    padding-top: 40px;
+}
+
+.header_menu{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.telephone_header{
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+}
+
+.telephone_header:hover{
+    color: #a0a0a0;
+}
+
+.logo img{
+    margin-left: 300px;
+}
+
+.poisk{
+    width: 38px;
+    height: 38px;
+}
+
+.people{
+    width: 38px;
+    height: 38px;
+}
+
+.heart{
+    width: 50px;
+    height: 50px;
+}
+
+.menu{
+    display: flex;
+    gap: 50px;
+}
+
+.header_tel{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.header_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 112px;
+    height: 32px;
+    border-radius: 5px;
+    color: black;
+}
+
+.header_button:hover{
+    background-color: #353535;
+}
+
+.logo{
+    height: 50px;
+}
+
+.burger-menu {
+    top: 20px;
+    left: 10px;
+    z-index: 999;
+}
+
+.burger-icon {
+    display: block;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.burger-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #707070;
+}
+
+/* header end */
+
+/* banner start */
+
+.banner{
+    background-image: url(../img/banner/image39.png);
+    height: 743px;
+    width: 100px auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner h1{
+    font-size: 60px;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    color: white;
+}
+
+.banner p{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.banner a{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 62px;
+    background-color: white;
+    width: 209px;
+    height: 46px;
+    border-radius: 5px;
+}
+
+.banner a:hover{
+    color: #a0a0a0;
+}
+
+/* banner end */
+
+/* dover start */
+
+.dover{
+    padding-top: 175px;
+}
+
+.dover h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.dover img{
+    margin-top: 60px;
+}
+
+.main_slider {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide img{
+    min-width: 100%;
+}
+
+.btn_slide {
+    position: absolute;
+    top: 43%;
+    cursor: pointer;
+
+}
+
+.btn_slide img{
+    width: 50px;
+    height: 50px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.container_slider {
+    width: 1900px;
+    margin: 0 auto;
+}
+
+/* dover end */
+
+/* popular start */
+
+.popular{
+    background-color: #313131;
+    margin-top: 175px;
+}
+
+.popular_info1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular h1{
+    color: white;
+    font-size: 60px;
+}
+
+.popular_info a{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-left: 150px;
+    padding-top: 30px;
+    gap: 20px;
+}
+
+.popular_info a:hover{
+    color: #040506;
+}
+
+/* popular end */
+
+
+/* kotalog start */
+
+
+
+.kotalog{
+    padding-top: 175px;
+}
+
+.kotalog h1{
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    color: white;
+}
+
+.vibor{
+    display: flex;
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.vse{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+}
+
+.vse:hover{
+    transform: scale(1.2);
+}
+
+.vibor a:hover{
+    transform: scale(1.2);
+}
+
+.kart{
+    margin-top: 60px;
+}
+
+.kotalog_info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.kart_info{
+    background-color: #DFDFDF;
+    width: 382px;
+    height: 135px;
+    border-radius: 10px;
+}
+
+.kart_info a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.kart_info a:hover{
+    color: #585858;
+}
+
+.s63{
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.god{
+    color: #908F8F;
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 35px;
+    margin-left: 20px;
+}
+
+.god1{
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.price{
+    color: #908F8F;
+    font-weight: 700;
+    font-size: 13px;
+    padding-left: 250px;
+    margin-top: -34px;
+}
+
+.price1{
+    font-size: 15px;
+    font-weight: 700;
+    padding-left: 250px;
+
+}
+
+/* katalog end */
+
+/* sotr start */
+
+.sotr{
+    padding-top: 175px;
+}
+
+.sotr h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+}
+
+.info{
+    font-size: 25px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.name{
+    font-size: 30px;
+    padding-right: 17px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.kart_info1{
+    background-color: #DFDFDF;
+    width: 382px;
+    height: 135px;
+    border-radius: 10px;
+}
+
+.kart_info1 a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.kart_info1 a:hover{
+    color: #585858;
+}
+
+/* sotr end */
+
+/* partner start */
+
+.partner{
+    padding-top: 175px;
+}
+
+.partner h1{
+    color: white;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.partner_img{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* partner end */
+
+/* otzivi start */
+
+.otzivi{
+    padding-top: 175px;
+    max-width: 1550px;
+    position: relative;
+}
+
+.otzivi_info{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.otzivi h1{
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.otziv{
+    width: 404px;
+    margin-top: 57px;
+    height: 295px;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    position: relative;
+}
+
+.otziv_verh{
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-top: 35px;
+    margin-left: 28px;
+}
+
+.otziv_verh_info {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.otziv_verh_info h2{
+    font-size: 20px;
+}
+
+.otziv_verh_info p{
+    font-size: 13px;
+}
+
+.otziv_niz {
+    display: flex;
+    margin-top: 28px;
+    margin-left: 28px;
+}
+
+.otziv_niz p{
+    font-size: 12px;
+    text-indent: 10px;
+    line-height: 20px;
+}
+
+.ocenka_otziva{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider_circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 21px;
+    margin-top: 71px;
+}
+
+/* otzivi end */
+
+/* kontakti start */
+
+.kontakti{
+    padding-top: 175px;
+}
+
+.kontakti h1{
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.inform{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inform h2{
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.inform p{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.kontakti_info{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    margin-top: 57px;
+    padding: 35px;
+}
+
+.forma{
+    display: flex;
+    flex-direction: column;
+}
+
+.forma h2{
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.forma a{
+    margin-top: 30px;
+    font-size: 26px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    width: 220px;
+    height: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    padding-top: 8px;
+}
+
+.forma a:hover{
+    background-color: #353535;
+    color: white;
+}
+
+.forma input{
+    margin-top: 30px;
+    width: 488px;
+    height: 57px;
+    font-size: 15px;
+    color: #E8E8E8;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #E8E8E8;
+    padding-left: 10px;
+}
+
+/* kontakti end */
+
+/* voprosi start */
+
+.voprosi{
+    padding-top: 175px;
+}
+
+.voprosi h1{
+    font-size: 45px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.faq {
+    max-width: 1600px;
+    margin: 50px auto;
+    padding: 0 0px;
+}
+
+.faq__item {
+    margin-bottom: 30px;
+    border: 1px solid #1D1E1F;
+    background-color: #1D1E1F;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.faq__head {
+    padding: 50px 40px;
+    background-color: #1D1E1F;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    border-radius: 30px 30px 0px 0px;
+    transition: background-color 0.3s ease;
+
+}
+
+.faq__head {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Montserrat-SemiBold';
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+.faq__head:hover {
+    background-color: #1D1E1F;
+}
+
+.faq__head::after {
+    content: '+';
+    font-family: 'Montserrat-Regular';
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    transition: transform 0.3s ease;
+}
+
+.faq__head.active::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq__body {
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    background-color: #1D1E1F;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.faq__body p {
+    padding: 0px 40px 30px;
+    margin: 0;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* voprosi end */
+
+/* footer start */
+
+.footer1{
+    margin-top: 175px;
+    background-color: #040506;
+    height: 300px;
+    padding: 0 230px;
+}
+
+
+.footer_menu_class{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer_menu h2{
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer_menu_osn {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 19px;
+}
+
+.footer_menu_osn a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer_info_vk {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_info_vk img{
+    margin-top: 19px;
+}
+
+.footer_info_vk h2{
+    color: white;
+    font-size: 24px;
+}
+
+.footer_menu_oplata {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_menu_oplata h2{
+    color: white;
+    font-size: 24px;
+}
+
+.footer_menu_oplata_img {
+    margin-top: 19px;
+}
+
+.btn_to_top {
+    width: 45px;
+    height: 44px;
+    background-color: #ffffff;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    z-index: 100;
+    padding-top: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer end */
+
+/* Header Adjustments for 768px */
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px; /* Reduce container width */
+        padding: 0 15px;
+    }
+
+    .logo img {
+        margin-left: 180px;
+    }
+
+    .header_tel a{
+        font-size: 13px;
+        gap: 0;
+    }
+
+    .header_tel{
+        gap: 0;
+    }
+
+    .telephone_header {
+        width: 100%;
+        text-align: center;
+        text-wrap: nowrap;
+    }
+
+    .header_button {
+        text-align: center;
+    }
+
+    .burger_menu {
+        display: block;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    /* Banner Section */
+    .banner {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .banner h1 {
+        font-size: 40px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .banner p {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .banner a {
+
+        font-size: 16px;
+    }
+
+    .dover_img img{
+        width: 100%;
+    }
+
+    .dover{
+        padding-top: 40px;
+    }
+
+    /* Popular Models Section */
+
+    .popular{
+        margin-top: 40px;
+    }
+
+    .popular_info1 h1{
+        font-size: 30px;
+    }
+
+
+    .popular_info1 img{
+        width: 379px;
+        height: 239px;
+    }
+
+    .popular_info a {
+        font-size: 13px;
+        padding: 5px;
+
+    }
+
+    /* Catalog Section */
+
+    .kotalog{
+        padding-top: 40px;
+    }
+
+    .vibor {
+        flex-wrap: wrap;
+    }
+
+    .kart{
+        width: 40%;
+    }
+
+    .kart img{
+        width: 100%;
+    }
+
+    .kart p{
+        font-size: 60%;
+    }
+
+    .price{
+        padding-left: 150px;
+        margin-top: -22px;
+    }
+
+    .price1{
+        padding-left: 150px;
+        margin-top: 0px;
+    }
+
+    .god{
+        margin-left: 20px;
+    }
+
+    .god1{
+        margin-left: 20px;
+    }
+
+    .vse {
+        margin-bottom: 20px;
+    }
+
+    .kotalog_info {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .kart {
+        margin-bottom: 20px;
+    }
+
+    .kart_info {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .s63 {
+        font-size: 16px;
+    }
+
+    .god, .price {
+        font-size: 12px;
+    }
+
+    /* Employees Section */
+
+    .sotr{
+        padding-top: 40px;
+    }
+
+    .sotr .kotalog_info {
+        flex-wrap: wrap;
+    }
+
+    .kart img{
+        width: 100%;
+    }
+
+    .kart_info1{
+        width: 100%;
+    }
+
+    /* Partners Section */
+
+    .partner{
+        padding-top: 40px;
+    }
+
+    .partner_img {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Reviews Section */
+
+    .otzivi{
+        padding-top: 40px;
+    }
+
+    .otzivi_info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .otziv {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Contacts Section */
+
+    .kontakti{
+        padding-top: 40px;
+    }
+
+    .kontakti_info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .forma input {
+        width: 100%;
+    }
+
+    .inform h2 {
+        font-size: 24px;
+    }
+
+    .inform p {
+        font-size: 16px;
+    }
+
+    .forma h2 {
+        font-size: 24px;
+    }
+
+    .forma input {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .forma a {
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    /* FAQ Section */
+
+    .voprosi{
+        padding-top: 40px;
+    }
+
+    .voprosi h1 {
+        font-size: 45px;
+    }
+
+    .voprosi_info h2 {
+        font-size: 18px;
+    }
+
+    .voprosi_info p {
+        font-size: 14px;
+    }
+
+    /* Footer Section */
+
+    .logo_footer img{
+        width: 100%;
+    }
+
+    .footer1 {
+        padding: 20px;
+    }
+
+    .footer_menu_class {
+        gap: 20px;
+    }
+
+    .footer_menu_osn a {
+        font-size: 14px;
+    }
+
+    .footer_menu_img img{
+        width: 35px;
+        height: 35px;
+    } 
+
+    .footer_menu h2{
+        font-size: 20px;
+    }
+
+    .footer_info_vk h2{
+    font-size: 20px;
+    }
+
+    .footer_menu_oplata h2{
+        font-size: 20px;
+    }
+
+    .footer_menu_oplata_img img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .main_slider {
+        position: relative;
+        overflow: hidden;
+    
+    }
+    
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+    }
+    
+    .slide {
+        min-width: 100%;
+        height: 405px;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .slide img{
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .btn_slide {
+        position: absolute;
+        top: 37%;
+        cursor: pointer;
+    
+    }
+    
+    .btn_slide img{
+        width: 30px;
+        height: 30px;
+        background-color: #d9d9d9;
+        border-radius: 50%;
+    }
+    
+    .prev {
+        left: 10px;
+    }
+    
+    .next {
+        right: 10px;
+    }
+    
+    .container_slider {
+        margin: 0 auto;
+    }
+}   
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .5s;
+    scroll-behavior: smooth;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #040506;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1450px;
+}
+
+/* Adjustments for 390px */
+@media (max-width: 390px) {
+    .container {
+        max-width: 360px; /* Reduce container width */
+        padding: 0 10px;
+    }
+
+    /* Header Adjustments */
+    .header_menu {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        margin-top: 5px;
+        margin-left: 20px; 
+        width: 140px;
+        height: 40px;
+    }
+
+    .header_tel {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .telephone_header {
+        font-size: 18px;
+    }
+
+    .header_button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main_slider {
+        position: relative;
+        overflow: hidden;
+    
+    }
+    
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+    }
+    
+    .slide {
+        min-width: 100%;
+        height: 195px;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .slide img{
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .btn_slide {
+        position: absolute;
+        top: 27%;
+        cursor: pointer;
+    
+    }
+    
+    .btn_slide img{
+        width: 30px;
+        height: 30px;
+        background-color: #d9d9d9;
+        border-radius: 50%;
+    }
+    
+    .prev {
+        left: 10px;
+    }
+    
+    .next {
+        right: 10px;
+    }
+    
+    .container_slider {
+        margin: 0 auto;
+    }
+
+    /* Banner Section */
+    .banner {
+        height: auto;
+        padding: 20px 0;
+    }
+
+
+    .banner h1 {
+        font-size: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+    .banner p {
+        font-size: 12px;
+        padding-top: 20px;
+    }
+
+    .banner a { 
+        width: 160px;
+        font-size: 14px;
+        
+    }
+
+    .dover h1{
+        margin-top: 40px;
+        font-size: 20px;
+    }
+
+    /* Popular Models Section */
+
+    .popular{
+        margin-top: 40px;
+    }
+
+    .popular_info1 {
+
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .popular_info1 h1{
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .popular_info1 img{
+        height: 200px;
+    }
+
+    .popular_info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+
+    .popular_info a {
+        padding: 3px 5px;
+        font-size: 10px;
+    }
+
+    /* Catalog Section */
+    .vibor {
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .vibor img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .kotalog h1{
+        font-size: 20px;
+        padding-top: 40px;
+    }
+
+    .vse {
+        margin-top: 15px;
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .kotalog_info {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .kart {
+        margin-bottom: 15px;
+    }
+
+    .kart_info a{
+        font-size: 13px;
+        margin-left: 5px;
+    }
+
+    .kart_info {
+        width: 100%;
+        padding: 5px;
+        height: 100%;
+    }
+
+    .s63 {
+        margin-left: 5px;
+    }
+
+    .god {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+
+    .god1{
+        margin-left: 5px;
+    }
+
+    .price{
+        padding-left: 70px;
+    }
+
+    .price1{
+        padding-left: 63px;
+        font-size: 10px;
+
+    }
+
+    /* Employees Section */
+
+    .sotr h1{
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    .sotr .kotalog_info {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .kart_info1 a{
+        font-size: 18px;
+    }
+
+    .kart_info1{
+        height: 100%;
+        padding: 5px;
+    }
+
+    .otzivi h1{
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    /* Partners Section */
+
+    .partner h1{
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    .partner_img {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .partner_img img{
+        width: 30%;
+    }
+
+    /* Reviews Section */
+    .otzivi_info {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .otziv {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .otziv_verh_info h2 {
+        font-size: 16px;
+    }
+
+    .otziv_niz p {
+        font-size: 12px;
+    }
+
+    .slider_circle{
+        margin-top: 0;
+    }
+
+    /* Contacts Section */
+    .kontakti h1{
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    .kontakti_info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .inform h2 {
+        font-size: 24px;
+    }
+
+    .inform p {
+        font-size: 16px;
+    }
+
+    .forma h2 {
+        font-size: 24px;
+    }
+
+    .forma input {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .forma a {
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    /* FAQ Section */
+    .voprosi h1 {
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    .voprosi_info h2 {
+        font-size: 16px;
+        padding-left: 0;
+    }
+
+    .voprosi_info{
+        height: 100%;
+        padding: 20px;
+    }
+
+    .voprosi_info p {
+        font-size: 10px;
+        padding-left: 0;
+    }
+
+    /* Footer Section */
+    .footer_menu_class{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer1 {
+        padding: 20px;
+    }
+
+    .footer_menu_class {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer_menu_osn a {
+        font-size: 14px;
+    }
+
+    .logo_footer img{
+        width: 140px;
+        height: 40px;
+    }
+
+    .footer_menu h2{
+        font-size: 15px;
+    }
+
+    .footer_info_vk h2{
+        font-size: 15px;
+    }
+
+    .footer_menu_oplata h2{
+        font-size: 15px;
+
+    }
+
+    .footer1{
+        margin-top: 40px;
+    }
+}

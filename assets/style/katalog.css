@@ -1,0 +1,1514 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .5s;
+    scroll-behavior: smooth;
+    outline: none;
+    text-decoration: none;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1450px;
+}
+
+body{
+    background-color: #040506;
+}
+
+/* Подключение шрифтов */
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+/* назначение шрифтов */
+
+h1{
+    font-family: Roboto, sans-serif;
+}
+
+h2{
+    font-family: Roboto, sans-serif;
+}
+
+h3{
+    font-family: Roboto, sans-serif;
+}
+
+h4{
+    font-family: Roboto, sans-serif;
+}
+
+p{
+    font-family: Roboto, sans-serif;
+}
+
+a{
+    font-family: Roboto, sans-serif;
+}
+
+/* header start */
+
+.header_menu{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.telephone_header{
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+}
+
+.telephone_header:hover{
+    color: #a0a0a0;
+}
+
+.logo img{
+    margin-left: 300px;
+}
+
+.poisk{
+    width: 38px;
+    height: 38px;
+}
+
+.people{
+    width: 38px;
+    height: 38px;
+}
+
+.heart{
+    width: 50px;
+    height: 50px;
+}
+
+.menu{
+    display: flex;
+    gap: 50px;
+}
+
+.header_tel{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.header_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 112px;
+    height: 32px;
+    border-radius: 5px;
+    color: black;
+}
+
+.header_button:hover{
+    background-color: #908F8F;
+}
+
+.logo{
+    height: 50px;
+}
+
+.burger-menu {
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+}
+
+.burger-icon {
+    display: block;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.burger-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #707070;
+}
+
+/* header end */
+
+/* kotalog start */
+
+.kotalog{
+    margin-top: 120px;
+}
+
+.kotalog h1{
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    color: white;
+}
+
+.vibor{
+    display: flex;
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.vse{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+}
+
+.vse:hover{
+    transform: scale(1.2);
+}
+
+.vibor a:hover{
+    transform: scale(1.2);
+}
+
+.kart{
+    margin-top: 60px;
+}
+
+.kotalog_info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.kart_info{
+    background-color: #DFDFDF;
+    width: 382px;
+    height: 135px;
+    border-radius: 10px;
+}
+
+.kart_info a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.kart_info a:hover{
+    color: #585858;
+}
+
+.s63{
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.god{
+    color: #908F8F;
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 35px;
+    margin-left: 20px;
+}
+
+.god1{
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.price{
+    color: #908F8F;
+    font-weight: 700;
+    font-size: 13px;
+    padding-left: 250px;
+    margin-top: -34px;
+}
+
+.price1{
+    font-size: 15px;
+    font-weight: 700;
+    padding-left: 250px;
+}
+
+/* katalog end */
+
+/* o_nas start */
+
+.content {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.image {
+    margin-left: 110px;
+    margin-top: 55px;
+    width: 933px;
+    height: 622px;
+}
+
+.content p{
+    color: white;
+    font-size: 24px;
+    text-align: left;
+    margin-top: 55px;
+    max-width: 1200px;
+
+}
+
+.content h1{
+    color: white;
+    font-size: 45px;
+}
+
+/* o_nas end */
+
+/* user_info start */
+
+.content1 {
+    padding: 50px 0;
+    background-color: #e2e2e2;
+}
+
+.section-title1 {
+    font-size: 30px;
+    margin-top: 36px;
+}
+
+.back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    width: 133px;
+    height: 48px;
+    border-radius: 5px;
+}
+
+.back-btn:hover{
+    background-color: #908F8F;
+}
+
+.back-btn1:hover{
+    background-color: #908F8F;
+}
+
+.profile {
+    display: flex;
+    gap: 50px;
+    margin-top: 71px;
+}
+
+.profile__avatar {
+
+    overflow: hidden;
+}
+
+.avatar_img {
+    width: 157px;
+    height: 158px;
+    object-fit: cover;
+}
+
+
+.upload-btn1{
+    background-color: black;
+    width: 167px;
+    height: 39px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+    margin-top: 24px;
+}
+
+
+.profile__info {
+    flex: 1;
+    background-color: white;
+    width: 1060px;
+    height: 287px;
+    border-radius: 5px;
+    padding-top: 38px;
+    padding-left: 35px;
+}
+
+.delete-btn1{
+    color: #707070;
+    border: 1px solid #707070;
+    width: 113px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 12px;
+    margin-left: 25px;
+    font-size: 10px;
+}
+
+.profile__info h2 {
+    font-size: 16px;
+}
+
+.edit-link {
+    color: #000;
+    margin-left: 850px;
+    font-size: 14px;
+}
+
+.lich_kabinet{
+    display: flex;
+    align-items: center;
+}
+
+.profile__info table {
+    width: 40%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+.profile__info table td {
+    padding-top: 11px;
+    vertical-align: top;
+    font-size: 13px;
+    color: #3a3a3a;
+}
+
+/* user_info end */
+
+/* basket start */
+
+/* Заголовок */
+
+.back-btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    width: 133px;
+    height: 48px;
+    border-radius: 5px;
+
+}
+
+.cart122{
+    background-color: #e2e2e2;  
+    height: 890px;
+}
+
+.cart132{
+    padding-top: 36px;
+}
+
+.basket_obshai{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 56px;
+    margin-left: 28px;
+}
+
+.cart122 h2 {
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+/* Список товаров */
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.remove-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.basket_img {
+    width: 264px;
+    height: 181px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.item-details {
+    flex: 1;
+    text-align: left;
+}
+
+.item-details p{
+    font-size: 20px;
+}
+
+.quantity-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.qty-decrease, .qty-increase {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    width: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.price12 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 350px;
+    font-size: 15px;
+}
+
+/* Блок оформления заказа */
+.checkout {
+    text-align: right;
+}
+
+.checkout h3 {
+    font-size: 27px;
+    text-align: left;
+    margin-top: 70px;
+}
+
+.summary {
+    margin-top: 38px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    max-width: 390px;
+    font-size: 14px;
+}
+
+.summary-item.total {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.terms span{
+    font-size: 12px;
+    max-width: 401px;
+}
+
+.terms input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkout-btn {
+    background-color: #000;
+    color: #fff;
+    width: 397px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.checkout-btn:hover{
+    background-color: #e2e2e2;
+    color: black;
+    border: 1px solid black;
+}
+
+/* basket end */
+
+/* admin_panel start */
+
+.admin-panel{
+    background-color: #e2e2e2;
+    height: 890px;
+    padding-top: 36px;
+}
+
+.admin_panel_verh{
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Заголовок */
+.admin-panel h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Кнопка добавления автомобиля */
+.add-car-btn {
+    background-color: transparent;
+    border: 1px solid #000000;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 331px;
+    height: 51px;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-car-btn:hover{
+    background-color: #000000;
+    color: white;
+}
+
+/* Список автомобилей */
+.car-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.car-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.car-item img {
+    width: 264px;
+    height: 181px;
+    object-fit: cover;
+}
+
+.item-details {
+    flex: 1;
+    text-align: left;
+}
+
+.quantity-controls {
+    display: flex;
+    gap: 5px;
+    padding-right: 500px;
+
+}
+
+.qty-decrease, .qty-increase {
+    background-color: #e2e2e2;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+input[type="number12"] {
+    width: 30px;
+    text-align: center;
+    border: 1px solid #e2e2e2;
+    padding: 5px;
+    background-color: #e2e2e2;
+}
+
+.price132 {
+    position: absolute;
+    font-weight: bold;
+    margin-left: 900px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+/* Кнопки действий */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn {
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 157px;
+    height: 31px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 136px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-btn:hover{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+
+/* admin_panel end */
+
+/* footer start */
+
+.poisk_katalog{
+    background-color: #040506;
+    color: white;
+    width: 331px;
+    height: 51px;
+    border-radius: 50px;
+    border: 1px solid white;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    padding-right: 205px;
+    margin-left: 570px;
+}
+
+.poisk_katalog::placeholder{
+    color: white;
+}
+
+.footer1{
+    margin-top: 50px;
+    background-color: #040506;
+    height: 400px;
+    padding: 100px 230px;
+}
+
+
+.footer_menu_class{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer_menu h2{
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer_menu_osn {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 19px;
+}
+
+.footer_menu_osn a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer_info_vk {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_info_vk h2{
+    color: white;
+    font-size: 24px;
+}
+
+.footer_info_vk img{
+    margin-top: 19px;
+}
+
+.footer_menu_oplata {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_menu_oplata h2{
+    color: white;
+    font-size: 24px;
+}
+
+.footer_menu_oplata_img {
+    margin-top: 19px;
+}
+
+.btn_to_top {
+    width: 45px;
+    height: 44px;
+    background-color: #ffffff;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    z-index: 100;
+    padding-top: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* footer end */
+
+/* Header Adjustments for 768px */
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px; /* Reduce container width */
+        padding: 0 15px;
+    }
+
+    .logo img {
+        margin-left: 180px;
+    }
+
+    .header_tel a{
+        font-size: 13px;
+        gap: 0;
+    }
+
+    .header_tel{
+        gap: 0;
+    }
+
+    .telephone_header {
+        width: 100%;
+        text-align: center;
+        text-wrap: nowrap;
+    }
+
+    .header_button {
+        text-align: center;
+    }
+
+    .burger_menu {
+        display: block;
+    }
+
+    .overlay{
+        position: absolute;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    /* admin_panel */
+
+    .admin_panel_verh a{
+        width: 170px;
+        height: 40px;
+        font-size: 10px;
+        margin-bottom: 17px;
+    }
+
+    .admin_panel_verh h2{
+        font-size: 20px;
+    }
+
+    .car-item img{
+        width: 140px;
+        height: 90px;
+    }
+
+    .quantity-controls button{
+        width: 20px;
+        height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quantity-controls input{
+        width: 22px;
+        height: 22px;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .car-item{
+        gap: 10px;
+    }
+
+    .price132{
+        margin-left: 300px;
+        margin-top: 10px;
+    }
+
+    .quantity-controls{
+        padding-right: 0;
+    }
+
+    .edit-btn{
+        font-size: 10px;
+        width: 85px;
+        height: 21px;
+    }
+
+    .delete-btn{
+        font-size: 10px;
+        width: 75px;
+        height: 21px;
+    }
+
+    .action-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .admin-panel{
+        height: 580px;
+    }
+
+
+
+    /* basket */
+
+    .cart122{
+        padding-top: 30px;
+    }
+
+    .basket_obshai{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .basket_img{
+        width: 120px;
+        height: 80px;
+    }
+
+    .remove-btn img{
+        width: 10px;
+        height: 10px;
+    }
+
+    .price12{
+        margin-left: 100px;
+    }
+
+    .checkout{
+        margin-left: 120px;
+    }
+    /* Catalog Section */
+
+    .poisk_katalog{
+        margin-left: 80px;
+    }
+
+    .kotalog{
+        padding-top: 40px;
+    }
+
+    .vibor {
+        flex-wrap: wrap;
+        margin-left: 100px;
+    }
+
+    .kart{
+        width: 40%;
+    }
+
+    .kart img{
+        width: 100%;
+    }
+
+    .kart p{
+        font-size: 60%;
+    }
+
+    .price{
+        padding-left: 150px;
+        margin-top: -22px;
+    }
+
+    .price1{
+        padding-left: 150px;
+        margin-top: 0px;
+    }
+
+    .god{
+        margin-left: 20px;
+    }
+
+    .god1{
+        margin-left: 20px;
+    }
+
+    .vse {
+        margin-bottom: 20px;
+    }
+
+    .kotalog_info {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .kart {
+        margin-bottom: 20px;
+    }
+
+    .kart_info {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .s63 {
+        font-size: 16px;
+    }
+
+    .god, .price {
+        font-size: 12px;
+    }
+
+    /* o_nas */
+
+    .content img{
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+    }
+
+    /* user_info */
+
+    .profile__info h2 {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .edit-link {
+        color: #000;
+        margin-left: 300px;
+        font-size: 11px;
+        text-decoration-line: underline;
+    }
+    
+    .lich_kabinet{
+        display: flex;
+        align-items: center;
+    }
+    
+    .profile__info table {
+        width: 70%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    
+    .profile__info table td {
+        padding-top: 11px;
+        vertical-align: top;
+        font-size: 12px;
+        color: #3a3a3a;
+    }
+
+    /* Footer Section */
+
+    .logo_footer img{
+        width: 100%;
+    }
+
+    .footer1 {
+        padding: 20px;
+    }
+
+    .footer_menu_class {
+        gap: 20px;
+    }
+
+    .footer_menu_osn a {
+        font-size: 14px;
+    }
+
+    .footer_menu_img img{
+        width: 35px;
+        height: 35px;
+    } 
+
+    .footer_menu h2{
+        font-size: 20px;
+    }
+
+    .footer_info_vk h2{
+    font-size: 20px;
+    }
+
+    .footer_menu_oplata h2{
+        font-size: 20px;
+    }
+
+    .footer_menu_oplata_img img{
+        width: 40px;
+        height: 40px;
+    }
+}   
+
+/* Adjustments for 390px */
+@media (max-width: 390px) {
+    .container {
+        max-width: 360px; /* Reduce container width */
+        padding: 0 10px;
+    }
+
+    /* Header Adjustments */
+    .header_menu {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        margin-top: 5px;
+        margin-left: 20px; 
+        width: 140px;
+        height: 40px;
+    }
+
+    .header_tel {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .telephone_header {
+        font-size: 18px;
+    }
+
+    .header_button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* admin-panel */
+
+    .admin_panel_verh a{
+        width: 170px;
+        height: 40px;
+        font-size: 10px;
+        margin-bottom: 17px;
+    }
+
+    .admin_panel_verh h2{
+        font-size: 20px;
+    }
+
+    .car-item img{
+        width: 100px;
+        height: 60px;
+    }
+
+    .quantity-controls button{
+        width: 20px;
+        height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quantity-controls input{
+        width: 22px;
+        height: 22px;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .car-item{
+        gap: 10px;
+    }
+
+    .price132{
+        margin-left: 3px;
+        margin-top: 80px;
+    }
+
+    .quantity-controls{
+        padding-right: 0;
+    }
+
+    .edit-btn{
+        font-size: 10px;
+        width: 85px;
+        height: 21px;
+    }
+
+    .delete-btn{
+        font-size: 10px;
+        width: 75px;
+        height: 21px;
+    }
+
+    .action-buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .admin-panel{
+        height: 510px;
+    }
+
+    /* basket */
+
+    .basket_img{
+        width: 90px;
+        height: 60px;
+    }
+
+    .item-details p{
+        font-size: 12px;
+    }
+
+    .price12{
+        margin-left: 0;
+        margin-right: 40px;
+        font-size: 12px;
+    }
+
+    .checkout{
+        margin-left: 0;
+        max-width: 280px;
+    }
+
+    .cart-item{
+        display: flex;
+        gap: 10px;
+    }
+
+    .checkout h3{
+        font-size: 20px;
+    }
+
+    .checkout a{
+        width: 285px;
+    }
+
+    /* user_info */
+
+    .profile__info h2 {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .edit-link {
+        color: #000;
+        margin-left: 40px;
+        font-size: 11px;
+        text-decoration-line: underline;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+    
+    .lich_kabinet{
+        display: flex;
+        align-items: center;
+    }
+    
+    .profile__info table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    
+    .profile__info table td {
+        padding-top: 11px;
+        vertical-align: top;
+        font-size: 12px;
+        color: #3a3a3a;
+    }
+
+    .avatar_img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .delete-btn1{
+        width: 80px;
+        margin-left: 0;
+    }
+
+    .upload-btn1{
+        width: 80px;
+        font-size: 10px;
+    }
+
+    /* o_nas */
+
+    .content p{
+        font-size: 16px;
+    }
+
+    .content h1{
+        font-size: 30px;
+    }
+
+    .content img{
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+    }
+
+    /* Catalog Section */
+
+    .poisk_katalog{
+        width: 230px;
+        height: 40px;
+        font-size: 14px;
+        padding-right: 100px;
+        margin-right: 80px;
+    }
+
+    .vibor {
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .vibor img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .kotalog{
+        margin-top: 80px;
+    }
+
+    .kotalog h1{
+        font-size: 20px;
+    }
+
+    .vse {
+        margin-top: 15px;
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .kotalog_info {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .kart {
+        margin-bottom: 15px;
+    }
+
+    .kart_info a{
+        font-size: 13px;
+        margin-left: 5px;
+    }
+
+    .kart_info {
+        width: 100%;
+        padding: 5px;
+        height: 100%;
+    }
+
+    .s63 {
+        margin-left: 5px;
+    }
+
+    .god {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+
+    .god1{
+        margin-left: 5px;
+    }
+
+    .price{
+        padding-left: 70px;
+    }
+
+    .price1{
+        padding-left: 63px;
+        font-size: 10px;
+    }
+
+    /* Footer Section */
+    .footer_menu_class{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer1 {
+        padding: 20px;
+    }
+
+    .footer_menu_class {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer_menu{
+        margin-left: 12px;
+    }
+
+    .footer_menu_osn a {
+        font-size: 14px;
+    }
+
+    .logo_footer img{
+        width: 100px;
+        height: 30px;
+    }
+
+    .footer_menu h2{
+        font-size: 15px;
+    }
+
+    .footer_info_vk h2{
+        font-size: 15px;
+    }
+
+    .footer_menu_oplata h2{
+        font-size: 15px;
+    }
+
+    .footer1{
+        margin-top: 40px;
+    }
+}
